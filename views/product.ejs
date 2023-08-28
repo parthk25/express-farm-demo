@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+    <title>Express Farm</title>
+    <link rel="stylesheet" href="/stylesheets/product.css">
+    <link href="https://fonts.googleapis.com/css?family=Megrim|Nunito+Sans:400,900" rel="stylesheet" />
+  <link rel="icon"
+    href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/155/ear-of-maize_1f33d.png" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>🌽 Node Farm in Express 🥦</h1>
+        
+        <figure class="product">
+            <% if(data[i].organic == true){ %>
+              <div class="product__organic">
+                  <h5>Organic!</h5>
+              </div>
+            <% } %>
+            <a href="/" class="product__back">
+                <span class="emoji-left">👈</span>Back
+            </a>
+            <div class="product__hero">
+                <span class="product__emoji product__emoji--1">
+                    <%= data[i].image %>
+                </span>
+                <span class="product__emoji product__emoji--2">
+                    <%= data[i].image %>
+                </span>
+                <span class="product__emoji product__emoji--3">
+                    <%= data[i].image %>
+                </span>
+                <span class="product__emoji product__emoji--4">
+                    <%= data[i].image %>
+                </span>
+                <span class="product__emoji product__emoji--5">
+                    <%= data[i].image %>
+                </span>
+                <span class="product__emoji product__emoji--6">
+                    <%= data[i].image %>
+                </span>
+                <span class="product__emoji product__emoji--7">
+                    <%= data[i].image %>
+                </span>
+                <span class="product__emoji product__emoji--8">
+                    <%= data[i].image %>
+                </span>
+                <span class="product__emoji product__emoji--9">
+                    <%= data[i].image %>
+                </span>
+            </div>
+            <h2 class="product__name">
+                <%= data[i].productName %>
+            </h2>
+            <div class="product__details">
+                <p><span class="emoji-left">🌍</span>
+                    <%= data[i].from %>
+                </p>
+                <p><span class="emoji-left">❤️</span>
+                    <%= data[i].nutrients %>
+                </p>
+                <p><span class="emoji-left">📦</span>
+                    <%= data[i].quantity %>
+                </p>
+                <p><span class="emoji-left">🏷</span>
+                    <%= data[i].price %>
+                </p>
+            </div>
+
+            <a href="#" class="product__link">
+                <span class="emoji-left">🛒</span>
+                <span>Add to shopping card (<%= data[i].price %>)</span>
+            </a>
+
+            <p class="product__description">
+                <%= data[i].description %>
+            </p>
+        </figure>
+    </div>
+</body>
+
+</html>
